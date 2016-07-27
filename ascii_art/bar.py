@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from __future__ import division, absolute_import
+
+
+class Bar(object):
+    def __init__(self, data, width=60, bar_char='#', sort=False,
+                 map_func=lambda x: x):
+        self.data = data
+        self.width = width
+        self.bar_char = bar_char
+        self.sort = sort
+        self.map_func = map_func
+        self._prepare_data()
+
+    def _prepare_data(self):
+        self.max_key_len = max([len(key) for key in self.data.keys()])
+        self.max_val = max(self.data.values())
+
+    def render(self):
+        result = ''
+        for k, v in self.data.items():
+            p = v / self.max_val
+            shown = round(self.width * p)
+            blank = self.width - shown
+            bar = self.bar_char*(shown) + ' '*(blank)
+            result += "{:>{}s} | {} | {}\n".format(
+               k, self.max_key_len, bar, self.map_func(v)
+            )
+        return result
