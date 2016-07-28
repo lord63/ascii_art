@@ -28,6 +28,7 @@ class Bar(object):
         for k, v in self.items:
             p = v / self.max_val
             shown = round(self.width * p)
+            shown = shown + 1 if shown == 0 and v != 0 else shown
             blank = self.width - shown
             bar = self.bar_char*(shown) + ' '*(blank)
             result += "{:>{}s} | {} | {}\n".format(
