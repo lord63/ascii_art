@@ -3,6 +3,8 @@
 
 from __future__ import division, absolute_import
 
+from operator import itemgetter
+
 
 class Bar(object):
     def __init__(self, data, width=60, bar_char='#', sort=False,
@@ -17,10 +19,13 @@ class Bar(object):
     def _prepare_data(self):
         self.max_key_len = max([len(key) for key in self.data.keys()])
         self.max_val = max(self.data.values())
+        self.items = self.data.items()
+        if self.sort:
+            self.items = sorted(self.items, key=itemgetter(1), reverse=True)
 
     def render(self):
         result = ''
-        for k, v in self.data.items():
+        for k, v in self.items:
             p = v / self.max_val
             shown = round(self.width * p)
             blank = self.width - shown
