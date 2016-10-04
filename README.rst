@@ -11,6 +11,8 @@ Ascii Art
 
 Draw ascii art(bar, chart, histogram) in your terminal. We love terminal, right? :)
 
+.. image:: screenshots/chart.png
+
 Install
 -------
 
@@ -32,9 +34,18 @@ Contribute
 
 Contributions are always welcome at any time! :sparkles: :cake: :sparkles:
 
+Kudos
+-----
+
+It's a python port of the original chart_, bars_ and histogram_, all the glories should belong to tj_.
+
 License
 -------
 
 MIT © lord63_.
 
+.. _chart: https://github.com/jstrace/chart
+.. _bars: https://github.com/jstrace/bars
+.. _histogram: https://github.com/jstrace/histogram
+.. _tj: https://github.com/tj
 .. _lord63: https://github.com/lord63
