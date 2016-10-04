@@ -3,7 +3,7 @@
 
 from __future__ import absolute_import, print_function
 
-from ascii_art.bar import Bar
+from ascii_art import Bar
 
 
 def example_one():

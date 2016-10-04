@@ -3,7 +3,7 @@
 
 from __future__ import absolute_import, print_function
 
-from ascii_art.histogram import Histogram
+from ascii_art import Histogram
 
 
 def example_one():

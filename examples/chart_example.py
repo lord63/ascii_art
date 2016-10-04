@@ -3,7 +3,7 @@
 
 from __future__ import absolute_import, print_function
 
-from ascii_art.chart import Chart
+from ascii_art import Chart
 
 
 def example_one():

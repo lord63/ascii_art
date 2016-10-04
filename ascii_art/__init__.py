@@ -10,6 +10,12 @@
     :license: MIT, see LICENSE for more details.
 """
 
+from ascii_art.bar import Bar
+from ascii_art.chart import Chart
+from ascii_art.histogram import Histogram
+
+
+__all__ = [Bar, Chart, Histogram]
 __title__ = "ascii_art"
 __version__ = "0.1.0"
 __author__ = "lord63"
