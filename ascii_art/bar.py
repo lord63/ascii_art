@@ -34,4 +34,4 @@ class Bar(object):
             result += "{:>{}s} | {} | {}\n".format(
                 k, self.max_key_len, bar, self.map_func(v)
             )
-        return result
+        return '\n' + result
