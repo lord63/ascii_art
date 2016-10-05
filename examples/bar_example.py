@@ -60,7 +60,5 @@ def example_three():
 
 if __name__ == "__main__":
     example_one()
-    print("\n")
     example_two()
-    print("\n")
     example_three()
