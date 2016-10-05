@@ -1,6 +1,8 @@
 Ascii Art
 =========
 
+|Build Status| |Coverage Status|
+
 ::
 
                     _ _              _
@@ -49,3 +51,8 @@ MIT © lord63_.
 .. _histogram: https://github.com/jstrace/histogram
 .. _tj: https://github.com/tj
 .. _lord63: https://github.com/lord63
+.. |Build Status| image:: https://travis-ci.org/lord63/ascii_art.svg
+   :target: https://travis-ci.org/lord63/ascii_art
+.. |Coverage Status| image:: https://codecov.io/github/lord63/ascii_art/coverage.svg?branch=master
+   :target: https://codecov.io/github/lord63/ascii_art?branch=master
+
