@@ -30,8 +30,8 @@ class Bar(object):
             shown = round(self.width * p)
             shown = shown + 1 if shown == 0 and v != 0 else shown
             blank = self.width - shown
-            bar = self.bar_char*(shown) + ' '*(blank)
+            bar = self.bar_char * (shown) + ' ' * (blank)
             result += "{:>{}s} | {} | {}\n".format(
-               k, self.max_key_len, bar, self.map_func(v)
+                k, self.max_key_len, bar, self.map_func(v)
             )
         return result
