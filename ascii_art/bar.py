@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import division, absolute_import
-
 from operator import itemgetter
 
 
-class Bar(object):
+class Bar:
     def __init__(self, data, width=60, bar_char='#', sort=False,
                  map_func=lambda x: x):
         self.data = data

@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import division, absolute_import
-
 from ascii_art.chart import Chart
 
 
-class Histogram(object):
+class Histogram:
     def __init__(self, data, bin_num=50, width=130, height=30, padding=3,
                  point_char=u'█', negative_point_char=u'░', axis_char=u'.'):
         self.data = data

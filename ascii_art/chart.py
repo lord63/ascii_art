@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import division, absolute_import
 
-
-class Chart(object):
+class Chart:
     def __init__(self, data, width=130, height=30, padding=3,
                  point_char=u'█', negative_point_char=u'░', axis_char=u'.'):
         self.data = data
