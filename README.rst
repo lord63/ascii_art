@@ -1,7 +1,7 @@
 Ascii Art
 =========
 
-|Build Status| |Coverage Status|
+|Latest Version| |Build Status| |Coverage Status| |Python Versions|
 
 ::
 
@@ -55,4 +55,6 @@ MIT © lord63_.
    :target: https://travis-ci.org/lord63/ascii_art
 .. |Coverage Status| image:: https://codecov.io/github/lord63/ascii_art/coverage.svg?branch=master
    :target: https://codecov.io/github/lord63/ascii_art?branch=master
-
+.. |Latest Version| image:: http://img.shields.io/pypi/v/ascii_art.svg
+   :target: https://pypi.python.org/pypi/ascii_art
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/ascii_art.svg

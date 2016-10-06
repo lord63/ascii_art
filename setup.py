@@ -31,13 +31,5 @@ setup(
     ],
     keywords="ascii art chart bar histogram commandline cli",
     packages=['ascii_art'],
-    include_package_data=True,
-    install_requires=[
-        # FIXME: fill the dependencies.
-    ],
-    entry_points={
-        'console_scripts': [
-            # FIXME: fill this field if your package is a cli or just delete this entry.
-        ]
-    }
+    include_package_data=True
 )
