@@ -22,7 +22,7 @@ class Chart:
         return self.skeleton
 
     def _prepare(self):
-        self.max = max(self.data)
+        self.max = max(abs(d) for d in self.data)  # for negative data
         self.label = str(self.max)
         self.label_width = len(self.label)
         self.label_padding = 1
