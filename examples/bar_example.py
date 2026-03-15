@@ -4,59 +4,50 @@
 from ascii_art import Bar
 
 
-def example_one():
+def basic():
+    """Default settings: default width, bar char, and no sorting."""
     data = {
         "cats": 6,
         "ferrets": 15,
         "dogs": 2,
-        "koalas": 0
+        "koalas": 0,
     }
-    b = Bar(data)
-    print(b.render())
+    bar = Bar(data)
+    print(bar.render())
 
 
-def example_two():
+def sorted_by_value():
+    """Sort bars by value descending, with a custom bar char and width."""
     data = {
         "ferrets": 20,
         "cats": 12,
         "dogs": 30,
-        "koalas": 3
+        "koalas": 3,
     }
-    b = Bar(data, bar_char="=", width=20, sort=True)
-    print(b.render())
+    bar = Bar(data, bar_char="=", width=20, sort=True)
+    print(bar.render())
 
 
-def example_three():
-    def transform_money(money):
-        if isinstance(money, int):
-            str_money = str(money)
-            if len(str_money) == 4:
-                currency = "thousand"
-            elif len(str_money) == 3:
-                currency = "hundred"
-            else:
-                currency = ""
-            return "{} {} yuan".format(str_money[0], currency)
-        else:
-            if "thousand" in money:
-                currency = 1000
-            elif "hundred" in money:
-                currency = 100
-            else:
-                currency = 1
-            num = int(money.split(' ')[0])
-            return num * currency
+def with_map_func():
+    """Use map_func to format displayed values (e.g. bytes → human-readable)."""
+    def fmt_bytes(n):
+        for unit in ("B", "KB", "MB", "GB"):
+            if n < 1024:
+                return f"{n:.0f} {unit}"
+            n /= 1024
+        return f"{n:.0f} TB"
 
     data = {
-        "phone": transform_money("5 thousand yuan"),
-        "earphone": transform_money("3 hundred yuan"),
-        "apple": transform_money("5 yuan")
+        "images": 2_400_000_000,
+        "videos": 800_000_000,
+        "docs":    15_000_000,
+        "logs":     3_000_000,
     }
-    b = Bar(data, bar_char="*", width=40, sort=True, map_func=transform_money)
-    print(b.render())
+    bar = Bar(data, width=40, sort=True, map_func=fmt_bytes)
+    print(bar.render())
 
 
 if __name__ == "__main__":
-    example_one()
-    example_two()
-    example_three()
+    basic()
+    sorted_by_value()
+    with_map_func()
