@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ascii_art"
-version = "0.1.0"
+version = "0.2.0"
 description = "Ascii art for python: chart, bar, histogram."
 readme = "README.rst"
 license = "MIT"
