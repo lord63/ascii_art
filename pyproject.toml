@@ -7,13 +7,12 @@ name = "ascii_art"
 version = "0.1.0"
 description = "Ascii art for python: chart, bar, histogram."
 readme = "README.rst"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "lord63", email = "lord63.j@gmail.com" }]
 keywords = ["ascii", "art", "chart", "bar", "histogram", "commandline", "cli"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Operating System :: POSIX",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
 ]
 requires-python = ">=3.10"

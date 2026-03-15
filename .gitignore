@@ -1,6 +1,10 @@
 # User specified
 ####################
 
+# uv
+.venv/
+uv.lock
+
 # virtualenv folder
 venv/
 venv33/
